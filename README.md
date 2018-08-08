@@ -1,6 +1,10 @@
 # local-email-sender
 
-### Send html emails for testing locally (work only with js!!!)
+### Send locally html emails for testing!
+
+You can take a look with this [DEMO](https://ticlekiwi.github.io/API-Documentation-HTML-Template/). \
+**Warning:** current demo doesn't send emails, you need to setup good parameters to make the magic happen.
+See How to use it section.
 
 ## Current version : 1.0.0
 
@@ -10,6 +14,7 @@
 * jQuery 3.3.1
 * Google Font (Raleway|Roboto+Slab)
 * [SmtpJS](https://www.smtpjs.com/)
+
 
 ## How to use it
 
