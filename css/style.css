@@ -1,0 +1,201 @@
+@charset "utf-8";
+
+/* RESET
+----------------------------------------------------------------------------------------*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size:100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+img, embed, object, video { max-width: 100%; }
+.ie6 img.full, .ie6 object.full, .ie6 embed, .ie6 video { width: 100%; }
+
+
+/* BASE
+----------------------------------------------------------------------------------------*/
+
+html,
+body{
+    background: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    min-height: 100%;
+    height: 100%;
+}
+h1{
+    font-size: 22px;
+    text-align: center;
+    display: block;
+    margin-bottom: 20px;
+    font-family: 'Roboto Slab', serif;
+}
+.logo{
+    margin: 20px auto;
+    display: block;
+    max-width: 80px;
+}
+.flex-container{
+    display: flex;
+    flex-flow: row wrap;
+}
+.flex-grow-1{
+    flex: 1 100%;
+}
+.flex-grow-2{
+    flex: 1 100%;
+}
+
+@media all and (min-width: 600px) {
+    .flex-grow-2 { flex: 1 auto; }
+}
+@media all and (min-width: 800px) {
+    .flex-container { flex: 2 0; }
+}
+
+.app-loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background-color: #ffffff;
+    background-size: 200px 200px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url('../favicon.png');
+    -webkit-transition: background-size 0.3s ease, opacity 0.9s ease;
+    -moz-transition: background-size 0.3s ease, opacity 0.9s ease;
+    -o-transition: background-size 0.3s ease, opacity 0.9s ease;
+    -ms-transition: background-size 0.3s ease, opacity 0.9s ease;
+    transition: background-size 0.3s ease, opacity 0.9s ease;
+}
+.app-loader.disabled{
+    background-size: 0 0;
+    opacity: 0;
+}
+.aligner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    min-height: 100%;
+}
+.content-center{
+    position: relative;
+    margin: 20px auto;
+    width: 880px;
+    box-sizing: border-box;
+}
+@media all and (max-width: 920px) {
+    .content-center{
+        margin: 20px;
+        width: 100%;
+    }
+}
+.content-input{
+    display: block;
+    padding: 0 6px;
+    margin-bottom: 12px;
+    position: relative;
+    overflow: hidden;
+}
+.content-input:last-child{
+    margin-bottom: 0;
+}
+.content-input .error{
+    color: #FF0033;
+    position: absolute;
+    top: 0;
+    right: 6px;
+    font-size: 12px;
+}
+.content-input label{
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-family: 'Roboto Slab', serif;
+}
+.content-input input,
+.content-input textarea{
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #2A55C5;
+    background: #ffffff;
+    padding: 12px;
+    border-radius: 3px;
+}
+.content-input textarea{
+    min-height: 300px;
+}
+.content-input input:focus,
+.content-input textarea:focus{
+    border: 1px solid #167CD8;
+}
+input[type=submit]{
+    background-color: #2A55C5;
+    color: #ffffff;
+    border: none;
+    outline: 0;
+    padding: 12px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    -ms-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
+    font-family: 'Roboto Slab', serif;
+    font-size: 14px;
+}
+input[type=submit]:not(.success):not(.loading):hover{
+    background-color: #167CD8;
+}
+input[type=submit].loading{
+    background-color: #2A55C5;
+    color: transparent !important;
+    background-size: 26px auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url('loader.gif');
+}
+input[type=submit].success{
+    background-color: #2BB673;
+}
+.content-input.error-input input,
+.content-input.error-input label,
+.content-input.error-input textarea {
+    border-color: #FF0033 !important;
+    color: #FF0033;
+}
+.error-message{
+    color: #FF0033;
+    margin: 20px;
+    text-align: center;
+}

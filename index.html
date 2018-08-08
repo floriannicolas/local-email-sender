@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Local Email Sender</title>
+    <link rel="icon" href="favicon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto+Slab:300" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" media="all">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://smtpjs.com/v2/smtp.js"></script>
+    <script src="js/params.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+<div class="aligner">
+    <div class="content-center">
+        <img src="favicon.png" class="logo"/>
+        <h1>Local Email Sender</h1>
+        <form id="form-send-email">
+            <div class="error-message"></div>
+            <div class="flex-container">
+                <div class="content-input flex-grow-2">
+                    <label for="input-to">To</label>
+                    <input type="text" id="input-to" name="to"/>
+                </div>
+                <div class="content-input flex-grow-2">
+                    <label for="input-subject">Subject</label>
+                    <input type="text" id="input-subject" name="subject"/>
+                </div>
+                <div class="content-input flex-grow-1">
+                    <label for="textarea-html">Body</label>
+                    <textarea id="textarea-html" name="body"></textarea>
+                </div>
+                <div class="content-input flex-grow-1">
+                    <input type="submit" id="submit-button" value="Send email"/>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="app-loader"></div>
+</body>
+
+</html>
