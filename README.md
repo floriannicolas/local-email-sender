@@ -1,4 +1,4 @@
-# local-email-sender
+# Local Email Sender
 
 ### Send locally html emails for testing!
 
