@@ -2,7 +2,7 @@
 
 ### Send locally html emails for testing!
 
-You can take a look with this [DEMO](https://ticlekiwi.github.io/API-Documentation-HTML-Template/). \
+You can take a look with this [DEMO](https://ticlekiwi.github.io/local-email-sender/). \
 **Warning:** current demo doesn't send emails, you need to setup good parameters to make the magic happen.
 See How to use it section.
 
